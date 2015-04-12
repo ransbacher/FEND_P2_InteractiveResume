@@ -6,4 +6,4 @@ Building resume by writing a JS script that will combine personal information wi
 
 ## Screenshot
 
-...
+![Screenshot](images/screenshot.png)
