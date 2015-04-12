@@ -12,7 +12,7 @@ var bio = {
         "blog": "http://li-xinyang.github.io"
     },
     "welcomeMessage": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi quas quidem, ea porro maxime ab culpa odio expedita ipsum, fugit vero deserunt, minima quibusdam aliquam natus consectetur ipsa tenetur cum.",
-    "skills": ["Skill 01", "Skill 02", "Skill 03", "Skill 04", "Skill 05", "Skill 06"],
+    "skills": ["Programming", "Financial Planning", "UI Design", "UX Design"],
     "biopic": "images/fry.jpg",
     "display": function() {
         var dataPlaceholder = '%data%';
@@ -197,6 +197,24 @@ var projects = {
 
 // Insert HEAD info.
 bio.display();
+
+function addFooterContact() {
+    var formattedMobile = HTMLmobile.replace(dataPlaceholder, bio.contacts.mobile);
+    var formattedEmail = HTMLemail.replace(dataPlaceholder, bio.contacts.email);
+    var formattedTwitter = HTMLtwitter.replace(dataPlaceholder, bio.contacts.twitter);
+    var formattedGithub = HTMLgithub.replace(dataPlaceholder, bio.contacts.github);
+    var formattedBlog = HTMLblog.replace(dataPlaceholder, bio.contacts.blog);
+    var formattedLocation = HTMLlocation.replace(dataPlaceholder, bio.contacts.location);
+
+    $('#footerContacts').append(formattedMobile)
+        .append(formattedEmail)
+        .append(formattedTwitter)
+        .append(formattedGithub)
+        .append(formattedBlog)
+        .append(formattedLocation);
+}
+
+addFooterContact();
 
 // Insert WORKEXPERIENCE
 work.display();
