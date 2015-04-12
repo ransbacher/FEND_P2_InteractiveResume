@@ -49,6 +49,13 @@ var bio = {
                 $('#skills').append(formattedSkills);
             }
         }
+
+        $('#footerContacts').append(formattedMobile)
+            .append(formattedEmail)
+            .append(formattedTwitter)
+            .append(formattedGithub)
+            .append(formattedBlog)
+            .append(formattedLocation);
     }
 };
 
@@ -197,24 +204,6 @@ var projects = {
 
 // Insert HEAD info.
 bio.display();
-
-function addFooterContact() {
-    var formattedMobile = HTMLmobile.replace(dataPlaceholder, bio.contacts.mobile);
-    var formattedEmail = HTMLemail.replace(dataPlaceholder, bio.contacts.email);
-    var formattedTwitter = HTMLtwitter.replace(dataPlaceholder, bio.contacts.twitter);
-    var formattedGithub = HTMLgithub.replace(dataPlaceholder, bio.contacts.github);
-    var formattedBlog = HTMLblog.replace(dataPlaceholder, bio.contacts.blog);
-    var formattedLocation = HTMLlocation.replace(dataPlaceholder, bio.contacts.location);
-
-    $('#footerContacts').append(formattedMobile)
-        .append(formattedEmail)
-        .append(formattedTwitter)
-        .append(formattedGithub)
-        .append(formattedBlog)
-        .append(formattedLocation);
-}
-
-addFooterContact();
 
 // Insert WORKEXPERIENCE
 work.display();
